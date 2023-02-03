@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
    <div>{cash}</div>
-   <button>Add</button>
-   <button>Get</button>
+   <button onClick={()=>addCash()}>Add</button>
+   <button onClick={()=>getCash()}>Get</button>
     </div>
   ); 
 }
