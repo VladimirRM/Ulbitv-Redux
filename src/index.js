@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
+import {createStore} from 'redux'
 
 const defaultState = {
   cash: 0,
@@ -19,12 +20,12 @@ const reducer = (state = defaultState, action) => {
       return state;
   }
 };
-const createStore = createStore(reducer);
+const store = createStore(reducer);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={store} >
       <App />
     </Provider>
   </React.StrictMode>
